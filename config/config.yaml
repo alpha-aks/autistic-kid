@@ -1,0 +1,26 @@
+# Audio parameters
+sample_rate: 22050  # Target sample rate for all audio files
+duration: 3  # Duration to pad/trim audio to (in seconds)
+n_mels: 128  # Number of Mel bands for spectrogram
+n_fft: 2048  # FFT window size
+hop_length: 512  # Number of samples between successive frames
+n_mfcc: 40  # Number of MFCC coefficients
+fmin: 0  # Minimum frequency for Mel filterbank
+fmax: 8000  # Maximum frequency for Mel filterbank
+
+# Model parameters
+input_shape: (128, 130, 1)  # Height, Width, Channels for spectrogram
+num_classes: 4  # Number of emotion classes
+conv_filters: [32, 64, 128]  # Number of filters for each conv block
+dense_units: 128  # Number of units in the dense layer
+dropout_rate: 0.3  # Dropout rate
+lstm_units: 128  # Number of LSTM units
+learning_rate: 0.001  # Learning rate for optimizer
+batch_size: 32  # Training batch size
+epochs: 50  # Number of training epochs
+
+# Paths
+data_dir: "data/raw"
+processed_dir: "data/processed"
+model_dir: "models"
+log_dir: "logs"
